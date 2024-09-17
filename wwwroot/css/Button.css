@@ -1,0 +1,128 @@
+/* Register Button */
+.button-register {
+    --color: rgb(255, 255, 255); /* White */
+    --primary-color: rgb(34, 193, 195); /* Teal */
+    --hover-color: rgb(253, 187, 45); /* Yellow */
+    --border-color: rgb(26, 115, 120); /* Darker Teal for borders */
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: bolder;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    border: 2px solid var(--border-color);
+}
+
+.button-text {
+    font-size: 18px;
+}
+
+.arrow {
+    display: inline-flex;
+    position: relative;
+    width: 30px;
+    height: 15px;
+    margin-left: 0.5rem;
+}
+
+    .arrow::after,
+    .arrow::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        border-color: var(--primary-color);
+    }
+
+    .arrow::after {
+        width: 10px;
+        height: 0;
+        border: 2px solid var(--primary-color);
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .arrow::before {
+        width: 10px;
+        height: 10px;
+        border-top: 4px solid var(--primary-color);
+        border-right: 4px solid var(--primary-color);
+        left: 3px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+.button-register:hover {
+    background-color: var(--primary-color);
+    color: var(--hover-color);
+}
+
+    .button-register:hover.arrow {
+        transform: translateX(10px);
+    }
+
+    .button-register:hover.text {
+        transform: translateX(10px);
+    }
+
+    .button-register:hover.arrow::after {
+        width: 25px;
+        border-color: var(--hover-color);
+    }
+
+    .button-register:hover.arrow::before {
+        left: 15px;
+        border-color: var(--hover-color);
+    }
+
+.button-register,
+.text,
+.arrow,
+.arrow::after,
+.arrow::before,
+.button-register::before,
+.button-register::after {
+    transition: all 0.3s, box-shadow 0.2s;
+}
+
+    .button-register::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 10px;
+        border-radius: 5px;
+        border: solid 3px var(--primary-color);
+        border-right-color: transparent;
+        background-color: transparent;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .button-register::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 10px;
+        border-radius: 5px;
+        border: solid 3px var(--primary-color);
+        border-left-color: transparent;
+        background-color: transparent;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .button-register:hover:before,
+    .button-register:hover:after {
+        width: 50% !important;
+    }
+
+    .button-register:active {
+        box-shadow: 0px 0px 0px 7px rgba(34, 193, 195, 0.295); /* Teal shadow */
+    }

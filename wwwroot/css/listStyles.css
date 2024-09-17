@@ -1,0 +1,196 @@
+/* List Container */
+.list-container {
+    --clr: #fff0f5; /* Light pink background */
+    --clr-text: #333; /* Dark text */
+    --clr-accent: #ff6347; /* Tomato red accent */
+    background-color: var(--clr);
+    padding: 1em;
+    padding-bottom: 1.1em;
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    outline: 2px solid var(--clr-accent); /* Accent-colored outline */
+    outline-offset: 3px;
+    width: 90%;
+}
+
+/* Top Bar */
+.top-bar {
+    list-style: none;
+    color: var(--clr-accent); /* Accent-colored text */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Item */
+.item {
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+    color: var(--clr-text); /* Dark text */
+    background-color: #ffebcd; /* Blanched almond background */
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+    .item:hover {
+        cursor: pointer;
+        background-color: #ffdead; /* Light peach hover */
+        color: #2f4f4f; /* Darker text on hover */
+    }
+
+/* Create Button */
+.create-btn {
+    font-family: inherit;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #ff6347 0%, #ff4500 100%); /* Vibrant orange-red gradient */
+    color: white;
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(255, 99, 71, 0.4); /* Subtle shadow */
+    transition: all 0.3s;
+    height: 90%;
+}
+
+    .create-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0px 8px 15px rgba(255, 99, 71, 0.6); /* Bigger shadow on hover */
+    }
+
+    .create-btn:active {
+        transform: scale(0.95);
+        box-shadow: 0px 2px 5px rgba(255, 99, 71, 0.5); /* Soft shadow on active */
+    }
+
+    .create-btn span {
+        display: block;
+        margin-left: 0.4em;
+        transition: all 0.3s;
+    }
+
+    .create-btn .svg-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin-right: 0.5em;
+        transition: all 0.3s;
+    }
+
+    .create-btn:hover .svg-wrapper {
+        background-color: rgba(255, 255, 255, 0.4); /* Hover effect */
+    }
+
+/* Action Button */
+.action-btn {
+    font-family: monospace;
+    background-color: var(--clr); /* Light pink background */
+    color: var(--clr-accent); /* Tomato red text */
+    border: 1px solid var(--clr-accent);
+    border-radius: 8px;
+    display: inline-block;
+    padding: 6px 20px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+    .action-btn:hover {
+        background-color: var(--clr-accent); /* Tomato red background on hover */
+        color: #fff; /* White text on hover */
+    }
+
+/* Pagination Button */
+.page-btn {
+    display: inline-block;
+    background-color: #fff; /* White background */
+    border: 1px solid var(--clr-accent); /* Tomato red border */
+    padding: 5px 10px;
+    font-family: monospace;
+    font-size: 17px;
+    color: var(--clr-accent); /* Tomato red text */
+    text-decoration: none;
+    border-radius: 0.4em;
+    transition: 0.3s;
+    width: 37px;
+    height: 37px;
+}
+
+    .page-btn:hover {
+        background-color: var(--clr-accent); /* Tomato red background on hover */
+        color: #fff; /* White text on hover */
+    }
+
+    .page-btn:active {
+        transform: scale(0.95);
+    }
+
+/* Icon Container */
+.icon-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--clr); /* Light pink background */
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer;
+}
+
+    .icon-container svg {
+        width: 50px;
+        height: auto;
+    }
+
+    .icon-container:active {
+        animation: press 0.2s 1 linear;
+    }
+
+        .icon-container:active svg:last-child {
+            animation: bounce 0.2s 1 linear;
+        }
+
+/* Text */
+.text {
+    color: var(--clr-text); /* Dark text */
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    user-select: none;
+}
+
+/* Animations */
+@keyframes press {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.92);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    50% {
+        transform: rotate(5deg) translate(20px, -50px);
+    }
+
+    to {
+        transform: scale(0.9) rotate(10deg) translate(50px, -80px);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,156 @@
+/* Base font size for responsive design */
+html {
+    font-size: 14px;
+    background-color: #e0f7fa; /* Light cyan background for a fresh look */
+    color: #212121; /* Dark gray text for readability */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Focus States */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem #ffffff, 0 0 0 0.25rem #ffab91; /* Soft orange focus for a bright highlight */
+}
+
+/* Body styling */
+body {
+    position: relative;
+    min-height: 100%;
+    margin-bottom: 60px;
+    font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+    background-color: #ffffff; /* White background for content sections */
+    color: #424242; /* Slightly lighter text */
+}
+
+/* List Container */
+.list-container {
+    --clr: #ffffff; /* White background */
+    --clr-text: #424242; /* Dark gray text */
+    --clr-accent: #ff5722; /* Vibrant orange for accents */
+    background-color: var(--clr);
+    padding: 1em;
+    padding-bottom: 1.1em;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    outline: 2px solid var(--clr-accent);
+    outline-offset: 3px;
+    width: 90%;
+}
+
+/* Top Bar */
+.top-bar {
+    list-style: none;
+    color: var(--clr-accent); /* Vibrant orange text */
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Item */
+.item {
+    border-radius: 10px;
+    transition: .4s ease-in-out;
+    color: var(--clr-text);
+    background-color: #f9fbe7; /* Light yellow background for contrast */
+    margin-bottom: 0.5em;
+}
+
+    .item:hover {
+        cursor: pointer;
+        background-color: rgba(255, 87, 34, 0.1); /* Subtle hover effect with vibrant orange tint */
+    }
+
+/* Create Button */
+.create-btn {
+    font-family: inherit;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #ff6f00 0%, #ffab00 100%); /* Vibrant orange to golden gradient */
+    color: #fff;
+    padding: 0.8em 1.2em;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    transition: all 0.3s;
+}
+
+    .create-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0px 8px 15px rgba(255, 87, 34, 0.2); /* Orange shadow on hover */
+    }
+
+    .create-btn:active {
+        transform: scale(0.95);
+        box-shadow: 0px 2px 5px rgba(255, 87, 34, 0.1); /* Lighter shadow on active */
+    }
+
+/* Action Button */
+.action-btn {
+    font-family: monospace;
+    background-color: #f9fbe7; /* Light yellow background */
+    color: var(--clr-accent); /* Vibrant orange text */
+    border: none;
+    border-radius: 8px;
+    padding: 6px 20px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+    .action-btn:hover {
+        background-color: var(--clr-accent); /* Vibrant orange background on hover */
+        box-shadow: 0 0 0 5px rgba(255, 87, 34, 0.2);
+        color: #fff;
+    }
+
+/* Pagination Button */
+.page-btn {
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid var(--clr-accent); /* Vibrant orange border */
+    padding: 5px 10px;
+    font-family: monospace;
+    font-size: 17px;
+    color: var(--clr-accent); /* Vibrant orange text */
+    text-decoration: none;
+    border-radius: 0.4em;
+    transition: 0.5s;
+}
+
+    .page-btn:hover {
+        background-color: var(--clr-accent); /* Vibrant orange background on hover */
+        color: #fff;
+        box-shadow: 0 0 0 5px rgba(255, 87, 34, 0.2);
+    }
+
+/* Icon Container */
+.icon-container {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+    .icon-container svg {
+        width: 50px;
+        height: auto;
+    }
+
+/* Text */
+.text {
+    color: var(--clr-accent); /* Vibrant orange text */
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    user-select: none;
+}
